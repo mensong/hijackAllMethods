@@ -5,7 +5,7 @@
 VOID displayHelp()
 {
 	wprintf(TEXT("injectAllTheThings - rui@deniable.org\n"));
-	wprintf(TEXT("Usage: injectAllTheThings.exe -t <option> <process name> <path/to/dll>\n"));
+	wprintf(TEXT("Usage: injectAllTheThings.exe -t <option> <process name> <full/path/to/dll>\n"));
 	wprintf(TEXT("Options:\n"));
 	wprintf(TEXT("  1\tDLL injection via CreateRemoteThread()\n"));
 	wprintf(TEXT("  2\tDLL injection via NtCreateThreadEx()\n"));
