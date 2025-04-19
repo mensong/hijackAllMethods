@@ -48,6 +48,7 @@ DWORD checkOS()
 
 	if (GetVersionEx(&os_version)) 
 	{
+#if 0
 		if (os_version.dwMajorVersion == 5) 
 		{
 #ifdef _DEBUG
@@ -69,6 +70,19 @@ DWORD checkOS()
 #endif
 			return(3);
 		}
+		if (os_version.dwMajorVersion == 6 && os_version.dwMinorVersion == 2)
+		{
+#ifdef _DEBUG
+			wprintf(TEXT("[+] OS version: Windows 10\n"));
+#endif
+			return(4);
+		}
+#else
+		if (os_version.dwMajorVersion > 5)
+		{
+			return(2);
+		}
+#endif
 	}
 	else
 		printf("[-] OS version detect failed.\n");

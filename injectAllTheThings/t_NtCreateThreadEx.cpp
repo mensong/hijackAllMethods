@@ -83,6 +83,12 @@ DWORD demoNtCreateThreadEx(PCWSTR pszLibFile, DWORD dwProcessId)
 			NULL
 			);
 
+		if (!hRemoteThread)
+		{
+			wprintf(TEXT("[-] NtCreateThreadEx Failed! [%d]\n"), GetLastError());
+			return(1);
+		}
+
 #ifdef _DEBUG
 		wprintf(TEXT("[+] Status: %s\n"), status);
 #endif

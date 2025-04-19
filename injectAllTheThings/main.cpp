@@ -32,7 +32,7 @@ DWORD wmain(int argc, wchar_t* argv[])
 			return(1);
 		}
 
-                SetSePrivilege();
+		SetSePrivilege();
 		
 		switch (_wtoi(argv[2]))
 		{
